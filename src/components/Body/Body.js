@@ -1,10 +1,11 @@
 import React from "react";
 import { BodyWrapper } from "./Body.style";
+import Header from "../Header/Header";
 
-const Body = () => {
+const Body = ({ spotify }) => {
   return (
     <BodyWrapper>
-      <h2>Body</h2>
+      <Header spotify={spotify} />
     </BodyWrapper>
   );
 };
