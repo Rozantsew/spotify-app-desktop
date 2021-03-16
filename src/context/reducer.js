@@ -3,8 +3,8 @@ export const initialState = {
   playlists: [],
   playing: false,
   item: null,
-  token:
-    "BQCJio4aBfqOmcPmFHaOhYFoJfk6Z11-ftPra1r0vpc3GXMpoGpm9HBzxrcQYS9rR4RZ6Lt6V89uS8Zvy0SOUQo2p1d48B2_Kj1MC00bQNe7gWLmEy07qkYYo2DReYh31tm69j1a-uV-UWDTV3MeiqryAbSi0h7dkia-j9xb4ilYaqhb",
+  // token:
+  //   "BQCJio4aBfqOmcPmFHaOhYFoJfk6Z11-ftPra1r0vpc3GXMpoGpm9HBzxrcQYS9rR4RZ6Lt6V89uS8Zvy0SOUQo2p1d48B2_Kj1MC00bQNe7gWLmEy07qkYYo2DReYh31tm69j1a-uV-UWDTV3MeiqryAbSi0h7dkia-j9xb4ilYaqhb",
 };
 
 const reducer = (state, action) => {
@@ -20,6 +20,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         token: action.token,
+      };
+
+    case "SET_PLAYLISTS":
+      return {
+        ...state,
+        playlists: action.playlists,
       };
 
     default:

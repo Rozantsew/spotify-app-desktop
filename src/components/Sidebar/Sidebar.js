@@ -9,8 +9,10 @@ import SidebarOption from "../SideBarOption/SidebarOption";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
+import { useStateValue } from "../../context/playerContext";
 
 const Sidebar = () => {
+  const [{ playlists }, dispatch] = useStateValue();
   return (
     <SidebarWrapper>
       <SidebarLogo
@@ -23,6 +25,10 @@ const Sidebar = () => {
         <SidebarOption Icon={LibraryMusicIcon} title="Your Library" />
       </OptionWrapper>
       <PlaylistTitle>PLAYLISTS</PlaylistTitle>
+
+      {playlists?.items?.map((playlist) => (
+        <SidebarOption title={playlist.name} />
+      ))}
 
       <SidebarOption title="Hip hop" />
       <SidebarOption title="Rock" />
