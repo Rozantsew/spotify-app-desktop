@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+# Click to see demo
+<a href="https://rozantsew.github.io/spotify-app/">Click to see demo</a>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
